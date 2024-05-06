@@ -1,1 +1,36 @@
-node_modules/**/* text=auto
+# Ignore node_modules directory
+node_modules/
+
+# Ignore log files and other generated files
+*.log
+*.txt
+*.json
+
+# Ignore npm debug log
+npm-debug.log*
+
+# Ignore environment-specific files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Ignore build output
+/build
+
+# Ignore dependencies installed by npm
+package-lock.json
+yarn.lock
+
+# Ignore IDE and editor files
+.vscode/
+.idea/
+
+# Ignore Mac-specific files
+.DS_Store
+
+# Ignore TypeScript build output
+/dist
+
+
