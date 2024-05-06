@@ -1,0 +1,43 @@
+<div class="bg-gray-50 w-full rounded-lg shadow">
+    <div class=" w-full rounded-lg shadow p-10">
+        <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+         view all Tenders details
+        </h1>
+<div class="relative overflow-x-auto mt-8">
+    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-white uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr class="bg-indigo-950">
+                <th  scope="col" class="px-6 py-3">Tender ID</th>
+      <th  scope="col" class="px-6 py-3">Tender Name</th>
+      <th  scope="col" class="px-6 py-3">Tender Type</th>
+      <th  scope="col" class="px-6 py-3">Bid Submission Deadline</th>
+      <th  scope="col" class="px-6 py-3">Contract Sign Deadline</th>
+      <th  scope="col" class="px-6 py-3">Estimated Cost</th>
+      <th  scope="col" class="px-6 py-3">Tender Details</th>
+      <th  scope="col" class="px-6 py-3">isOpen</th>
+      
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let tender of tenderDetails" class="bg-white border-b  dark:bg-gray-800 dark:border-gray-700">
+                <td>{{ tender.tenderId }}</td>
+      <td class="px-6 py-4">{{ tender.tenderName }}</td>
+      <td class="px-6 py-4">{{ tender.tenderType }}</td>
+      <td class="px-6 py-4">{{ convertToDate(tender.bidSubmissionDeadline) | date:'mediumDate' }}</td>
+      <td class="px-6 py-4">{{ convertToDate(tender.contractSignDeadline) | date:'mediumDate' }}</td>
+      
+      <td class="px-6 py-4">{{ tender.estimatedCost }}</td>
+      <td class="px-6 py-4">{{ tender.tenderDetails }}</td>
+      <td class="px-6 py-4">{{ tender.isOpen }}</td>
+     
+            </tr>
+           
+           
+        </tbody>
+    </table>
+</div>
+
+    </div>
+</div>
+
+

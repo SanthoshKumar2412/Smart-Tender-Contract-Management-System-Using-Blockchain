@@ -1,0 +1,32 @@
+<ul class="lg:flex font-medium text-xl text-slate-700 gap-8 lg:gap-10 items-center">
+    <li class="p-3 border-t lg:border-0">
+     <a [routerLink]="['home']">home</a>
+    </li>
+    <li class="p-3 border-t lg:border-0">
+     <a [routerLink]="['']">about</a>
+    </li>
+    <li class="p-3 border-t lg:border-0">
+     <div class="relative" (mouseenter)="isDropdownOpen = true" (mouseleave)="isDropdownOpen = false">
+         <a class="text-center inline-flex items-center" type="button">tender<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+         </svg>
+     </a>
+     
+         <!-- Dropdown menu -->
+         <div class="absolute z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700" [class.hidden]="!isDropdownOpen">
+             <ul class="py-2 text-sm text-gray-700 dark:text-gray-200">
+                 <li><a [routerLink]="['view-all-tender']" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">View all Tenders</a></li>
+                 <li><a [routerLink]="['bid-history']" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Bidding History</a></li>
+             </ul>
+         </div>
+     </div>
+     
+    </li>
+    <li class=" p-3 border-t lg:border-0">
+     <a [routerLink]="['profile']">account</a>
+    </li>
+    <li class="p-3 border-y lg:border-0">
+     <a (click)="logout()"><app-buttons colr="W" name="Log Out"></app-buttons></a>
+    </li>
+  </ul>
+

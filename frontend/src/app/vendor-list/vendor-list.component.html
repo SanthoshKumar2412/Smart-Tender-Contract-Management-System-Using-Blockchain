@@ -1,0 +1,51 @@
+<div class="bg-gray-50 w-full rounded-lg shadow">
+    <div class=" w-full rounded-lg shadow p-10">
+        <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+            vendors list
+        </h1>
+         
+
+<div class="relative overflow-x-auto mt-8">
+    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-white uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr class="bg-indigo-950">
+                <th scope="col" class="px-6 py-3">
+                    vendor id
+                </th>
+                <th scope="col" class="px-6 py-3">
+                   vendor name
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    mobile no
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    email
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    company
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    address
+                </th>
+              
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let vendor of vendors" class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4">{{ vendor.vendorId }}</td>
+                <td class="px-6 py-4">{{ vendor.username }}</td>
+                <td class="px-6 py-4">{{ vendor.mobileNo }}</td>
+                <td class="px-6 py-4">{{ vendor.email }}</td>
+                <td class="px-6 py-4">{{ vendor.companyName }}</td>
+                <td class="px-6 py-4">{{ vendor.address }}</td>
+            </tr>
+               
+            
+        </tbody>
+    </table>
+</div>
+
+    </div>
+</div>
+
+
